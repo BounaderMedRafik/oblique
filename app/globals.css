@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/climate-crisis");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,7 +24,7 @@
     --border: 225 39% 20%;
     --input: 225 39% 20%;
     --ring: 230 93% 40%;
-    --radius: 0.5rem;
+    --radius: 0.3rem;
   }
 
   .dark {
@@ -60,6 +61,6 @@
 
 @layer components {
   .wrapper {
-    @apply max-w-screen-lg mx-auto;
+    @apply max-w-7xl mx-auto py-4;
   }
 }

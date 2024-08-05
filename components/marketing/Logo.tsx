@@ -1,19 +1,45 @@
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
-const Logo = () => {
+const Logo = ({ withText }: { withText?: boolean }) => {
   return (
-    <div>
-      <div className=" dark:block hidden">
-        <img className=" w-14" src="\brand\LogoForDarkMode.png" alt="oblique" />
-      </div>
-      <div className=" dark:hidden block">
-        <img
-          className=" w-14"
-          src="\brand\LogoForLightMode.png"
-          alt="oblique"
-        />
-      </div>
-    </div>
+    <Link href={"/"}>
+      {!withText ? (
+        <div>
+          <motion.div
+            initial={{
+              rotate: "90deg",
+            }}
+            animate={{
+              rotate: "0deg",
+            }}
+            whileHover={{
+              rotate: "90deg",
+            }}
+          >
+            <img
+              className=" w-10 dark:invert"
+              src="\brand\MyFknLogo.png"
+              alt="oblique"
+            />
+          </motion.div>
+        </div>
+      ) : (
+        <div>
+          <motion.div className="group flex items-center ">
+            <div>
+              <img
+                className=" h-10 dark:invert"
+                src="\brand\MyFknLogoWithText.png"
+                alt="oblique"
+              />
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </Link>
   );
 };
 
