@@ -78,11 +78,11 @@ const dropdownItems = [
 const normalItems = [
   {
     name: "Why Oblqiue ?",
-    href: "#why",
+    href: "/#why",
   },
   {
     name: "Who we are ?",
-    href: "#who-we-are",
+    href: "/#who-we-are",
   },
 ];
 
@@ -90,7 +90,7 @@ const Navbar = () => {
   const [tab, setTab] = useState("none");
   return (
     <>
-      <div className=" fixed top-0 left-0 w-full z-50 bg-background/50 backdrop-blur">
+      <div className=" fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur">
         <div className=" border-b border-b-foreground/10">
           <div className="flex items-center wrapper justify-between">
             <div className="flex items-center gap-5">
@@ -121,7 +121,7 @@ const Navbar = () => {
                 ))}
                 {normalItems.map((item, i) => (
                   <div key={i}>
-                    <Link
+                    <a
                       className=" cursor-pointer opacity-75 hover:opacity-100 text-xs px-3 py-2 flex items-center gap-2"
                       href={item.href}
                     >
@@ -131,7 +131,7 @@ const Navbar = () => {
                           <ArrowUpRight size={15} />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 ))}
               </div>

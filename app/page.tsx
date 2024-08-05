@@ -1,6 +1,7 @@
 import Hero from "@/components/marketing/Hero";
 import Navbar from "@/components/marketing/Navbar";
-import Image from "next/image";
+import WhoOblique from "@/components/marketing/WhoOblique";
+import WhyOblique from "@/components/marketing/WhyOblique";
 
 export default function Home() {
   return (
@@ -10,6 +11,12 @@ export default function Home() {
       </div>
       <div>
         <Hero />
+      </div>
+      <div>
+        <WhyOblique />
+      </div>
+      <div>
+        <WhoOblique />
       </div>
       <div className="h-[200vh]" />
     </main>

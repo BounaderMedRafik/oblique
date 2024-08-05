@@ -62,7 +62,16 @@ const Hero = () => {
           }}
           className=" wrapper "
         >
-          <img src="/placeholder/image.png" alt="" />
+          <img
+            className=" h-full w-full rounded-3xl dark:hidden "
+            src="/marketing/heroscreen.png"
+            alt=""
+          />
+          <img
+            className=" h-full w-full rounded-3xl hidden dark:block"
+            src="/marketing/heroscreenDark.png"
+            alt=""
+          />
         </motion.div>
       </div>
     </>
