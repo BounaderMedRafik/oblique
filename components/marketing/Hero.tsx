@@ -18,12 +18,16 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
   const rotation = useTransform(scrollYProgress, [0, 1], [20, 0]);
-  const scaling = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const scaling = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
   return (
     <>
-      <div ref={ref}>
+      <div className="relative  overflow-hidden" ref={ref}>
+        <motion.div
+          className="w-[800px] h-[500px] absolute z-10  left-1/2  -translate-x-1/2
+         -top-64 bg-primary/35 rounded-full  blur-3xl"
+        />
         <div className="flex flex-col items-center justify-center  min-h-[80vh] wrapper">
           <div className="text-5xl font uppercase max-w-6xl text-center mx-auto  font-Climate pb-4 border-b border-foreground/25">
             <div>Your business & ideas</div>

@@ -79,7 +79,7 @@ const teamData = [
 
 const WhoOblique = () => {
   return (
-    <div className=" min-h-[40vh] wrapper pt-64">
+    <div id="who-we-are" className=" min-h-[40vh] wrapper pt-64">
       <div className="font-Climate text-5xl">
         Who Are <span className="text-primary uppercase ">Oblique</span> ?
       </div>
