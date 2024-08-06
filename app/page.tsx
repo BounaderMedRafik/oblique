@@ -1,3 +1,4 @@
+import Footer from "@/components/marketing/Footer";
 import Hero from "@/components/marketing/Hero";
 import Navbar from "@/components/marketing/Navbar";
 import WhoOblique from "@/components/marketing/WhoOblique";
@@ -18,7 +19,9 @@ export default function Home() {
       <div>
         <WhoOblique />
       </div>
-      <div className="h-[200vh]" />
+      <div>
+        <Footer />
+      </div>
     </main>
   );
 }
