@@ -100,6 +100,7 @@ const Navbar = () => {
               <div className="flex items-center ">
                 {dropdownItems.map((item, i) => (
                   <div
+                    key={i}
                     onClick={() => {
                       setTab(item.name);
                     }}

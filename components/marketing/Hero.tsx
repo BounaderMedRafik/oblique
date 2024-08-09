@@ -64,8 +64,9 @@ const Hero = () => {
             scale: scaling,
             opacity: opacity,
           }}
-          className=" wrapper "
+          className=" wrapper relative "
         >
+          <div className=" w-full h-full absolute top-0 left-0 bg-gradient-to-t from-background from-10% to-80% to-transparent z-20" />
           <img
             className=" h-full w-full rounded-3xl dark:hidden "
             src="/marketing/heroscreen.png"

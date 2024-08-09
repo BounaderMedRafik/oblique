@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Calendar } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 
 const pics = [
@@ -159,12 +159,12 @@ const CarouselifyBaby = () => {
 
 const OurBio = () => {
   return (
-    <div className="w-full wrapper flex mt-10">
+    <div className="w-full wrapper flex mt-10 h-[50vh]">
       <div className="w-[75%]">
         <div>
           <div className="text-2xl">
             <span className="text-primary font-bold italic">Oblique:</span>{" "}
-            Pioneering Digital Solutions in Algeria
+            Pioneering Digital Solutions everywhere
           </div>
         </div>
         <motion.div
@@ -197,7 +197,7 @@ const OurBio = () => {
           <div className="mt-2">
             ━ Our team comprises skilled <span className=" underline">web</span>{" "}
             and <span className=" underline">mobile</span>{" "}
-            <span className="text-green-400">developers</span>, talented
+            <span className="text-green-400">developers</span>, talented{" "}
             <span className="text-green-400">designers</span>, and IT
             specialists who are passionate about their craft. We offer a diverse
             range of services, including web and app development, design, and
@@ -210,63 +210,25 @@ const OurBio = () => {
             impact on the Algerian digital market. Our commitment to quality,
             innovation, and client satisfaction sets us apart.
           </div>
-          <div className="my-5  h-px bg-foreground/25" />
-          <div>
-            <Team />
-          </div>
         </motion.div>
       </div>
-      <div className="w-[25%] h-auto overflow-auto rounded-2xl">
+      <div className="w-[25%] h-auto overflow-auto rounded-2xl relative">
         <img
           className=" h-full w-full object-cover"
-          src="https://cdn.dribbble.com/userupload/13002800/file/original-8e91c7fb9931b217069d324d084c9846.png?resize=1024x1024"
-          alt=""
+          src="https://cdn.dribbble.com/userupload/3937358/file/original-96ea7753246b3e306482c5fd06855439.jpg?resize=1024x1024"
+          alt="Folio Illustration Agency"
         />
-      </div>
-    </div>
-  );
-};
-
-const Team = () => {
-  return (
-    <div>
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-foreground/10">
-          <thead>
-            <tr>
-              <th
-                className="px-6 py-3 bg-foreground text-left   
- text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                Name
-              </th>
-              <th className="px-6 py-3 bg-foreground text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Role
-              </th>{" "}
-              <th className="px-6 py-3 bg-foreground text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Skills
-              </th>{" "}
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-foreground/50">
-            {teamData.map((member) => (
-              <tr key={member.name}>
-                <td className="px-6 py-4 whitespace-nowrap flex items-center gap-2">
-                  <div className="h-10 w-10">
-                    <img
-                      className=" w-full h-full object-cover rounded-full"
-                      src={member.image}
-                      alt={member.name}
-                    />
-                  </div>
-                  <div className="text-sm italic">{member.name}</div>
-                </td>
-                <td className="px-6 py-4 text-sm ">{member.role}</td>
-                <td className="px-6 py-4  text-sm">{member.skills}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <a
+          href="https://dribbble.com/shots/19804802-Snow-Leopard"
+          target="_blank"
+        >
+          <div className="flex items-center gap-2 absolute top-3 hover:underline left-3 rounded-lg text-xs bg-background px-2 py-1  ">
+            <div>Folio Illustration Agency</div>
+            <div>
+              <ArrowUpRight size={13} />
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   );

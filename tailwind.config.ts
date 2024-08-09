@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         Climate: "Climate Crisis",
+        SF: "SF Pro Display",
       },
       colors: {
         border: "hsl(var(--border))",
