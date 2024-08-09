@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper pt-24">
       <div className="flex items-center justify-between">
         <div className="text-4xl font-Climate uppercase max-w-md">
           What we do? You May <span className="text-primary">Ask</span>

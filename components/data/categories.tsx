@@ -37,6 +37,7 @@ export const Workies = [
 
 export const MyProjects = [
   {
+    id: "greensea-portfolio",
     name: "GreenSea portfolio",
     category: "Landing Page",
     client: "Greensea©",
@@ -47,7 +48,7 @@ export const MyProjects = [
       </>
     ),
     websiteURL: "https://greensea.vercel.app/",
-    roles: ["webdev"],
+    roles: "webdev",
     images: [
       "https://bmed.vercel.app/greensea/1.jpeg",
       "https://bmed.vercel.app/greensea/2.jpeg",
@@ -56,13 +57,14 @@ export const MyProjects = [
     ],
   },
   {
+    id: "easy-doc",
     name: "Easy Doc",
     category: "Application",
     client: "Fast Pro",
     date: "Jul 13, 2024",
     desc: "I developed an application called Easy Doc that simplifies document archiving. It empowers you to easily search and filter your documents through various views, making information retrieval a breeze. I thoroughly enjoyed building this project!",
     websiteURL: "https://doc-easy-blue.vercel.app/",
-    roles: ["webdev", "design"],
+    roles: "design",
     images: [],
   },
 ];

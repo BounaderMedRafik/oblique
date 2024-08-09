@@ -31,7 +31,7 @@ export default function RootLayout({
             <div>
               <Navbar />
             </div>
-            <div className="pt-24 font-SF">{children}</div>
+            <div className=" font-SF">{children}</div>
           </ThemeProvider>
         </LenisProvider>
       </body>

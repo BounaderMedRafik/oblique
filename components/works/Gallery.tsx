@@ -2,10 +2,13 @@
 import React, { useState } from "react";
 import { MyProjects, Workies } from "../data/categories";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const Gallery = ({ paramsId }: { paramsId: string | string[] }) => {
   const [cat, setCat] = useState(paramsId);
+
   return (
     <div className="wrapper">
       <div className="flex items-center">
@@ -38,21 +41,71 @@ const Gallery = ({ paramsId }: { paramsId: string | string[] }) => {
           </motion.div>
         ))}
       </div>
-      <div className="mt-10">
-        <WorksGallery category={paramsId} />
+      <div className="pt-10 ">
+        {MyProjects.filter((item) => item.roles == cat || "all").map(
+          (item, i) => (
+            <div key={i}>
+              {item.roles == cat ? (
+                <AnimatePresence mode="wait">
+                  <Link href={`work/project/${item.id}`}>
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      exit={{
+                        opacity: 0,
+                      }}
+                      transition={{ duration: 0.5 * i, ease: "easeOut" }}
+                      className=" px-4 dark:px-0 group flex items-center justify-between py-3 hover:bg-primary/10 transition-all cursor-pointer"
+                    >
+                      <div className="opacity-75 group-hover:opacity-100 transition-all">
+                        {item.name} ── {item.client}
+                      </div>
+                      <div className="text-xs opacity-75 flex items-center gap-2">
+                        <div>{item.date}</div>
+                        <div>
+                          <ArrowUpRight size={15} />
+                        </div>
+                      </div>
+                    </motion.div>
+                  </Link>
+                </AnimatePresence>
+              ) : cat == "all" ? (
+                <AnimatePresence mode="wait">
+                  <Link href={`/project/${item.id}`}>
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                      }}
+                      exit={{
+                        opacity: 0,
+                      }}
+                      transition={{ duration: 0.5 * i, ease: "easeOut" }}
+                      className=" px-4 dark:px-0 group flex items-center justify-between py-3 hover:bg-primary/10 transition-all cursor-pointer"
+                    >
+                      <div className="opacity-75 group-hover:opacity-100 transition-all">
+                        {item.name} ── {item.client}
+                      </div>
+                      <div className="text-xs opacity-75 flex items-center gap-2">
+                        <div>{item.date}</div>
+                        <div>
+                          <ArrowUpRight size={15} />
+                        </div>
+                      </div>
+                    </motion.div>
+                  </Link>
+                </AnimatePresence>
+              ) : null}
+            </div>
+          )
+        )}
       </div>
-    </div>
-  );
-};
-
-const WorksGallery = ({ category }: { category: string | string[] }) => {
-  return (
-    <div className=" divide-y divide-foreground/25">
-      {MyProjects.map((item, i) => (
-        <div key={i}>
-          <div className="py-4 px-2">{item.name}</div>
-        </div>
-      ))}
     </div>
   );
 };
