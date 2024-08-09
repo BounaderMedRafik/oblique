@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { Domain } from "../data/idontknowhattonamethis";
 
 const Gallery = ({ paramsId }: { paramsId: string | string[] }) => {
   const [cat, setCat] = useState(paramsId);
@@ -47,7 +48,7 @@ const Gallery = ({ paramsId }: { paramsId: string | string[] }) => {
             <div key={i}>
               {item.roles == cat ? (
                 <AnimatePresence mode="wait">
-                  <Link href={`work/project/${item.id}`}>
+                  <Link href={`${Domain}works/project/${item.id}`}>
                     <motion.div
                       initial={{
                         opacity: 0,
@@ -75,7 +76,7 @@ const Gallery = ({ paramsId }: { paramsId: string | string[] }) => {
                 </AnimatePresence>
               ) : cat == "all" ? (
                 <AnimatePresence mode="wait">
-                  <Link href={`/project/${item.id}`}>
+                  <Link href={`${Domain}works/project/${item.id}`}>
                     <motion.div
                       initial={{
                         opacity: 0,
