@@ -21,6 +21,7 @@ const config = {
       fontFamily: {
         Climate: "Climate Crisis",
         SF: "SF Pro Display",
+        SPACEMONO: "Space Mono",
       },
       colors: {
         border: "hsl(var(--border))",
