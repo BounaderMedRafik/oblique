@@ -121,7 +121,7 @@ const DescriptiveContent = ({ id }: { id: string }) => {
             <div className="mt-10">
               <div className="text-3xl mb-3">Similar projects we made</div>
               <div>
-                {Suggestions.length == 0 ? (
+                {Suggestions.length < 1 ? (
                   <div className="flex items-center justify-center pt-10 opacity-75">
                     unavailable similar projects {`:<`}
                   </div>

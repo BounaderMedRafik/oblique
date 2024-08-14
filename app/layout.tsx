@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import LenisProvider from "@/components/providers/LenisProvider";
 import Navbar from "@/components/marketing/Navbar";
+import WorksProvider from "@/components/providers/WorksProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <LenisProvider>
           <ThemeProvider
@@ -31,7 +32,9 @@ export default function RootLayout({
             <div>
               <Navbar />
             </div>
-            <div className=" font-SF">{children}</div>
+            <div className=" font-SF">
+              <WorksProvider>{children}</WorksProvider>
+            </div>
           </ThemeProvider>
         </LenisProvider>
       </body>
