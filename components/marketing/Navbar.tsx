@@ -1,36 +1,21 @@
 "use client";
-import React, { useState } from "react";
-import Logo from "./Logo";
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import {
   Apple,
   AppWindow,
-  ArrowRight,
   ArrowUpRight,
-  BriefcaseBusiness,
   Brush,
   ChevronDown,
-  Code,
   GraduationCap,
-  Home,
   Minus,
-  Server,
-  University,
-  User,
   X,
 } from "lucide-react";
 import Link from "next/link";
-import { Button, buttonVariants } from "../ui/button";
+import { useState } from "react";
+import { buttonVariants } from "../ui/button";
 import { ModeToggle } from "../ui/ModeToggle";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "../ui/navigation-menu";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import Logo from "./Logo";
 
 const dropdownItems = [
   {
@@ -58,21 +43,21 @@ const dropdownItems = [
       },
     ],
   },
-  {
-    name: "Who we target ?",
-    items: [
-      {
-        title: "University students",
-        href: "/target/uvstudents",
-        icon: <University size={15} />,
-      },
-      {
-        title: "organization & start-ups",
-        href: "/target/startups",
-        icon: <BriefcaseBusiness size={15} />,
-      },
-    ],
-  },
+  // {
+  //   name: "Who we target ?",
+  //   items: [
+  //     {
+  //       title: "University students",
+  //       href: "/target/uvstudents",
+  //       icon: <University size={15} />,
+  //     },
+  //     {
+  //       title: "organization & start-ups",
+  //       href: "/target/startups",
+  //       icon: <BriefcaseBusiness size={15} />,
+  //     },
+  //   ],
+  // },
 ];
 
 const normalItems = [
@@ -143,7 +128,7 @@ const Navbar = () => {
                   variant: "default",
                   size: "sm",
                 })}
-                href={"/"}
+                href={"/booking-with-us"}
               >
                 <div className="flex items-center gap-2">
                   <div>Book With Us</div>
