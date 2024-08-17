@@ -23,10 +23,10 @@ const DescriptiveContent = ({ id }: { id: string }) => {
         {TheLilProject.map((item, i) => (
           <div key={i}>
             <div className="flex items-center gap-1">
-              {item.category.map((subItem, i) => (
+              {item.category.map((subItem, idx) => (
                 <div
                   className="bg-primary/25 border border-primary/50 px-3 py-0.5 text-foreground text-sm rounded-full"
-                  key={i}
+                  key={idx}
                 >
                   {subItem}
                 </div>
@@ -128,7 +128,7 @@ const DescriptiveContent = ({ id }: { id: string }) => {
                 ) : (
                   <div>
                     {Suggestions.map((item, i) => (
-                      <Link href={`${Domain}works/project/${item.id}`}>
+                      <Link key={i} href={`${Domain}works/project/${item.id}`}>
                         <motion.div
                           initial={{
                             opacity: 0,

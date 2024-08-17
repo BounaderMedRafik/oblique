@@ -400,7 +400,7 @@ const Booking = () => {
                               </span>
                             ) : (
                               <span className="text-destructive">
-                                You didn't Provide your full name
+                                You didn&apos;t Provide your full name
                               </span>
                             )}
                           </li>
@@ -412,7 +412,7 @@ const Booking = () => {
                               </span>
                             ) : (
                               <span className="text-destructive">
-                                You didn't Provide your email
+                                You didn&apos;t Provide your email
                               </span>
                             )}
                           </li>
@@ -424,7 +424,7 @@ const Booking = () => {
                               </span>
                             ) : (
                               <span className="text-destructive">
-                                You didn't Provide your phone number
+                                You didn&apos;t Provide your phone number
                               </span>
                             )}
                           </li>
