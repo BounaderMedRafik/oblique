@@ -1,4 +1,4 @@
-export const Domain = "http://localhost:3000/";
+export const Domain = "https://oblique-eight.vercel.app/";
 
 export const FEATURE_PRICES = {
   design: 3000,
