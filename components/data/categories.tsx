@@ -100,4 +100,57 @@ export const MyProjects = [
     isOpenSource: true,
     codesource: "https://github.com/BounaderMedRafik/greensea",
   },
+  {
+    id: "pothos-ui",
+    name: "POTHOS/UI",
+    category: ["Developpment", "Design"],
+    client: "Bounader Med Rafik",
+    date: "Aug 19, 2024",
+    desc: (
+      <>
+        <h2>
+          <strong>Pothos UI: A Community-Driven Solution</strong>
+        </h2>
+        <p>
+          Introducing Pothos UI, a versatile and user-friendly interface
+          designed to streamline your digital experience. Developed
+          collaboratively by a passionate community, Pothos UI offers a suite of
+          intuitive components and tools to enhance your projects.
+        </p>
+        <h3>
+          <strong>Key Features:</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Customization:</strong> Tailored to your unique needs,
+            Pothos UI empowers you to create visually stunning and functional
+            interfaces.
+          </li>
+          <li>
+            <strong>Efficiency:</strong> Streamline your workflow with a library
+            of pre-built components, saving you valuable time and effort.
+          </li>
+          <li>
+            <strong>Accessibility:</strong> Designed with inclusivity in mind,
+            Pothos UI ensures a seamless experience for all users.
+          </li>
+          <li>
+            <strong>Open-Source:</strong> Benefit from the power of
+            community-driven development, with ongoing improvements and
+            contributions.
+          </li>
+        </ul>
+      </>
+    ),
+    websiteURL: "https://pothosui.vercel.app/",
+    roles: "webdev",
+    images: [
+      "/pothos/1.jpeg",
+      "/pothos/2.jpeg",
+      "/pothos/3.jpeg",
+      "/pothos/4.jpeg",
+    ],
+    isOpenSource: true,
+    codesource: "https://github.com/BounaderMedRafik/pothos/",
+  },
 ];
