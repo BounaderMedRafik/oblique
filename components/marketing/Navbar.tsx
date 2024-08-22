@@ -123,7 +123,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex items-center gap-0.5">
-              <Link
+              {/* <Link
                 className={buttonVariants({
                   variant: "default",
                   size: "sm",
@@ -137,7 +137,7 @@ const Navbar = () => {
                   </div>
                   <div>For Free</div>
                 </div>
-              </Link>
+              </Link> */}
               <div>
                 <ModeToggle />
               </div>
